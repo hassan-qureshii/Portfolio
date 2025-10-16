@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Modal, Button } from "antd";
 
 // 🖼️ Import all images at the top
-import skycast from "../assets/skycast.png";
+import skyCast from "../assets/skyCast.png";
 import MealMetrics from "../assets/MealMetrics.png";
 import Microsoft from "../assets/Microsoft.png";
 import CODverse from "../assets/CODverse.png";
@@ -28,9 +28,9 @@ import GoogleClone from "../assets/Google-clone.png";
 // 📌 Project Data Array
 const projects = [
   {
-    name: "SkyCast Weather App",
+    name: "skyCast Weather App",
     path: "https://sky-cast-weather-tawny.vercel.app/",
-    image: skycast,
+    image: skyCast,
     description:
       "SkyCast Weather App is a sleek and responsive weather web application that provides real-time weather updates for any location worldwide.",
   },
@@ -138,7 +138,7 @@ const projects = [
     description: "A modern UI for payment gateway screens.",
   },
   {
-    name: "Conference Ticker Generator",
+    name: "Conference Ticket Generator",
     path: "https://conference-ticket-generator-main-hq.netlify.app/",
     image: TicketGenerator,
     description: "Generates custom conference tickets with user details.",
@@ -206,11 +206,10 @@ const AllProjects = () => {
         <h1 className="text-4xl font-black font-mono text-heading">
           All Projects
         </h1>
-        <p className="text-gray-600 mt-2">
-          Click on a project to explore more 🚀
-        </p>
+        <p className="text-gray-600 mt-2">Click on a project to explore more 🚀</p>
       </motion.div>
 
+      {/* 🧩 Project Grid */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
           <motion.div
