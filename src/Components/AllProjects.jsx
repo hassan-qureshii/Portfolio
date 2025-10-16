@@ -6,7 +6,7 @@ import { Modal, Button } from "antd";
 import skyCast from "../assets/skyCast.png";
 import MealMetrics from "../assets/MealMetrics.png";
 import Microsoft from "../assets/Microsoft.png";
-import CODverse from "../assets/CODverse.png";
+import CodVerse from "../assets/CodVerse.png";
 import DigitalEra from "../assets/DigitalEra.png";
 import Burger from "../assets/Burger.png";
 import ThreeColumn from "../assets/3-column-preview-card.png";
@@ -49,11 +49,11 @@ const projects = [
       "This website is a clone of Microsoft's official site, showcasing Microsoft 365, Windows 11, Edge, OneDrive, and Outlook.",
   },
   {
-    name: "CODverse",
+    name: "CodVerse",
     path: "https://co-dverse.vercel.app/",
-    image: CODverse,
+    image: CodVerse,
     description:
-      "CODverse is a modern, responsive Call of Duty fan hub built with React.js, Ant Design, and Framer Motion.",
+      "Codverse is a modern, responsive Call of Duty fan hub built with React.js, Ant Design, and Framer Motion.",
   },
   {
     name: "DigitalEra Faculty",
