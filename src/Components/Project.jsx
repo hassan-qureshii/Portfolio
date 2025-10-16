@@ -11,26 +11,73 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 
-// Import images
-import Burger from "../assets/Burger.png";
-import Caffine_cove from "../assets/Caffine_cove.png";
-import Cloud_management from "../assets/Cloud_management.png";
-import Form from "../assets/Form.png";
-import Gym from "../assets/Gym.png";
-import Microsoft from "../assets/Microsoft.png";
-import Squid_game from "../assets/Squid_game.png";
-import Youtube_clone from "../assets/Youtube_clone.png";
+// ✅ Corrected image imports
+import Burger from "../assets/burger.png";
+import CaffeineCove from "../assets/caffeinecove.png";
+import CloudManagement from "../assets/cloudmanagement.png";
+import Form from "../assets/form.png";
+import Gym from "../assets/gym.png";
+import Microsoft from "../assets/microsoft.png";
+import SquidGame from "../assets/squidgame.png";
+import YoutubeClone from "../assets/youtubeclone.png";
 
-// Images Array with names + live links
+// Images Array
 const Images = [
-  { img: Burger, title: "Burger Website", description: "This Website is a modern landing page designed for a burger restaurant or fast-food business.", link: "https://burger-website-hq.netlify.app/" },
-  { img: Caffine_cove, title: "Caffeine Cove", description: "Caffeine Cove is a sleek café/coffee-place website that delivers a clean and modern user experience. It features an inviting landing page with rich visuals, well-organized sections for menu items, about/about-us, contact info, and possibly responsive behavior for mobile and desktop. The design is polished, with smooth animations and intuitive navigation to give visitors a cozy, welcoming feel.", link: "https://caffine-cove.vercel.app/" },
-  { img: Cloud_management, title: "Cloud Sphere", description: "CloudSphere is a modern cloud management web app that simplifies multi-cloud infrastructure monitoring and control. Built with React and Tailwind CSS, it offers a sleek, responsive, and intuitive UI for developers teams.", link: "https://cloud-sphere.vercel.app/" },
-  { img: Form, title: "Payment method UI", description: "A responsive payment method UI designed to provide a smooth and user-friendly checkout experience. This project showcases a clean & interactive payment form that can be used for e-commerce websites, or any online transactions.", link: "https://payment-method-ui.netlify.app/" },
-  { img: Gym, title: "Gym Website", description: "This Gym Website is a engaging platform designed to promote fitness services and attract new members.Built with a modern and responsive design.", link: "https://gym-website-hq.netlify.app/" },
-  { img: Microsoft, title: "Microsoft Website UI", description: "This website appears to be a cloned version of Microsoft's official site, showcasing a variety of Microsoft products and services. It highlights tools like Microsoft 365, Windows 11, Microsoft Edge, OneDrive, and Outlook for mobile devices.", link: "https://website-9e404.web.app/" },
-  { img: Squid_game, title: "Squid Game UI", description: "This web project immerses visitors in the dramatic thrill of the Squid Game universe via a sleek, interactive landing page built with modern web technologies.", link: "https://squid-game-hq-dkyv.vercel.app/" },
-  { img: Youtube_clone, title: "Youtube Clone", description: "Video streaming clone project.", link: "https://youtube-clone.netlify.app" },
+  {
+    img: Burger,
+    title: "Burger Website",
+    description:
+      "This Website is a modern landing page designed for a burger restaurant or fast-food business.",
+    link: "https://burger-website-hq.netlify.app/",
+  },
+  {
+    img: CaffeineCove,
+    title: "Caffeine Cove",
+    description:
+      "Caffeine Cove is a sleek café/coffee-place website that delivers a clean and modern user experience.",
+    link: "https://caffine-cove.vercel.app/",
+  },
+  {
+    img: CloudManagement,
+    title: "Cloud Sphere",
+    description:
+      "CloudSphere is a modern cloud management web app that simplifies multi-cloud infrastructure monitoring and control.",
+    link: "https://cloud-sphere.vercel.app/",
+  },
+  {
+    img: Form,
+    title: "Payment method UI",
+    description:
+      "A responsive payment method UI designed to provide a smooth and user-friendly checkout experience.",
+    link: "https://payment-method-ui.netlify.app/",
+  },
+  {
+    img: Gym,
+    title: "Gym Website",
+    description:
+      "This Gym Website is a engaging platform designed to promote fitness services and attract new members.",
+    link: "https://gym-website-hq.netlify.app/",
+  },
+  {
+    img: Microsoft,
+    title: "Microsoft Website UI",
+    description:
+      "This website appears to be a cloned version of Microsoft's official site.",
+    link: "https://website-9e404.web.app/",
+  },
+  {
+    img: SquidGame,
+    title: "Squid Game UI",
+    description:
+      "This web project immerses visitors in the dramatic thrill of the Squid Game universe.",
+    link: "https://squid-game-hq-dkyv.vercel.app/",
+  },
+  {
+    img: YoutubeClone,
+    title: "Youtube Clone",
+    description: "Video streaming clone project.",
+    link: "https://youtube-clone.netlify.app",
+  },
 ];
 
 const Project = () => {
@@ -93,7 +140,6 @@ const Project = () => {
         </Link>
       </div>
 
-      {/* Material UI Dialog */}
       <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
         <DialogTitle>{selectedProject?.title}</DialogTitle>
         <DialogContent>
@@ -105,7 +151,6 @@ const Project = () => {
           <DialogContentText>{selectedProject?.description}</DialogContentText>
         </DialogContent>
         <DialogActions>
-          {/* Live project button */}
           {selectedProject?.link && (
             <Button
               component="a"

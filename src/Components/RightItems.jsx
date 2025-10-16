@@ -1,19 +1,20 @@
 import React from "react";
 
-import Html_logo from "../assets/Html_logo.png";
-import Css_logo from "../assets/Css_logo.png";
-import Boostrap_logo from "../assets/Boostrap_logo.png";
-import JavaScript_logo from "../assets/JavaScript_logo.png";
-import react_logo from "../assets/react_logo.png";
-import TailwindCss_logo from "../assets/TailwindCss_logo.png";
-import AntDesign_logo from "../assets/AntDesign_logo.png";
-import MaterialUI_logo from "../assets/MaterialUI_logo.png";
-import Framer_logo from "../assets/Framer_logo.png";
-import NodeJs_logo from "../assets/NodeJs_logo.png";
-import ExpressJs_logo from "../assets/ExpressJs_logo.png";
-import MongoDB_logo from "../assets/MongoDB_logo.png";
-import Vue from "../assets/Vue.png";
-import NextJs_logo from "../assets/NextJs_logo.png";
+// ✅ Fixed image imports for technologies
+import HtmlLogo from "../assets/htmllogo.png";
+import CssLogo from "../assets/csslogo.png";
+import BootstrapLogo from "../assets/bootstraplogo.png";
+import JavaScriptLogo from "../assets/jslogo.png";
+import ReactLogo from "../assets/reactlogo.png";
+import TailwindCssLogo from "../assets/tailwindcss_logo.png";
+import AntDesignLogo from "../assets/antdesignlogo.png";
+import MaterialUILogo from "../assets/materialuilogo.png";
+import FramerLogo from "../assets/framerlogo.png";
+import NodeJsLogo from "../assets/nodejslogo.png";
+import ExpressJsLogo from "../assets/expressjslogo.png";
+import MongoDBLogo from "../assets/mongodblogo.png";
+import VueLogo from "../assets/vue.png";
+import NextJsLogo from "../assets/nextjslogo.png";
 
 import { motion } from "framer-motion";
 import Technology from "./Technology";
@@ -22,30 +23,29 @@ import Contact from "./Contact";
 import Copyright from "./Copyright";
 import UpButton from "./UpButton";
 
-// Skills array
+// ✅ Skills array updated with consistent names
 const skills = [
-  { name: "HTML", img: Html_logo },
-  { name: "CSS", img: Css_logo },
-  { name: "Bootstrap", img: Boostrap_logo },
-  { name: "JavaScript", img: JavaScript_logo },
-  { name: "React", img: react_logo },
-  { name: "Tailwind CSS", img: TailwindCss_logo },
-  { name: "Next JS", img: NextJs_logo },
-  { name: "Ant Design", img: AntDesign_logo },
-  { name: "Material UI", img: MaterialUI_logo },
-  { name: "Vue", img: Vue },
-  { name: "Framer Motion", img: Framer_logo },
-  { name: "Node.js", img: NodeJs_logo },
-  { name: "Express.js", img: ExpressJs_logo },
-  { name: "MongoDB", img: MongoDB_logo },
+  { name: "HTML", img: HtmlLogo },
+  { name: "CSS", img: CssLogo },
+  { name: "Bootstrap", img: BootstrapLogo },
+  { name: "JavaScript", img: JavaScriptLogo },
+  { name: "React", img: ReactLogo },
+  { name: "Tailwind CSS", img: TailwindCssLogo },
+  { name: "Next JS", img: NextJsLogo },
+  { name: "Ant Design", img: AntDesignLogo },
+  { name: "Material UI", img: MaterialUILogo },
+  { name: "Vue", img: VueLogo },
+  { name: "Framer Motion", img: FramerLogo },
+  { name: "Node.js", img: NodeJsLogo },
+  { name: "Express.js", img: ExpressJsLogo },
+  { name: "MongoDB", img: MongoDBLogo },
 ];
 
 const RightItems = () => {
   return (
     <div
-      id="right-container" 
-      className="w-full h-screen import { MoveUp } from 'lucide-react';
-flex flex-col justify-between overflow-y-auto overflow-x-hidden scroll-smooth"
+      id="right-container"
+      className="w-full h-screen flex flex-col justify-between overflow-y-auto overflow-x-hidden scroll-smooth"
     >
       {/* About Section */}
       <div id="about" className="pt-10 pr-5 ">

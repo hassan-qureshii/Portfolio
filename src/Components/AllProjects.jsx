@@ -2,35 +2,35 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Modal, Button } from "antd";
 
-// 🖼️ Import all images at the top
-import skyCast from "../assets/skyCast.png";
-import MealMetrics from "../assets/MealMetrics.png";
-import Microsoft from "../assets/Microsoft.png";
-import CodVerse from "../assets/CodVerse.png";
-import DigitalEra from "../assets/DigitalEra.png";
-import Burger from "../assets/Burger.png";
-import ThreeColumn from "../assets/3-column-preview-card.png";
-import SinglePrice from "../assets/Single_Price.png";
-import LandingPage from "../assets/Landing-page.png";
-import CozaStore from "../assets/Coza-store.png";
-import Cartify from "../assets/Cartify.png";
-import BlogPreview from "../assets/Blog-preview-card.png";
-import ProfileMain from "../assets/Profile-main.png";
-import QrCode from "../assets/Qr-code.png";
-import TextAnalyzer from "../assets/TextAnalyzer.png";
-import Payment from "../assets/Payment.png";
-import TicketGenerator from "../assets/TicketGenerator.png";
-import Calculator from "../assets/Calculator.png";
-import Stopwatch from "../assets/Stopwatch.png";
-import LogicWhisper from "../assets/LogicWhisperApp.png";
-import GoogleClone from "../assets/Google-clone.png";
+// 🖼️ Import all images at the top (✅ fixed names)
+import SkyCast from "../assets/skycast.png";
+import MealMetrics from "../assets/mealmetrics.png";
+import Microsoft from "../assets/microsoft.png";
+import CodVerse from "../assets/codverse.png";
+import DigitalEra from "../assets/digitalera.png";
+import Burger from "../assets/burger.png";
+import ThreeColumn from "../assets/threecolumnpreviewcard.png";
+import SinglePrice from "../assets/singleprice.png";
+import LandingPage from "../assets/landingpage.png";
+import CozaStore from "../assets/cozastore.png";
+import Cartify from "../assets/cartify.png";
+import BlogPreview from "../assets/blogpreviewcard.png";
+import ProfileMain from "../assets/profilemain.png";
+import QrCode from "../assets/qrcode.png";
+import TextAnalyzer from "../assets/textanalyzer.png";
+import Payment from "../assets/payment.png";
+import TicketGenerator from "../assets/ticketgenerator.png";
+import Calculator from "../assets/calculator.png";
+import Stopwatch from "../assets/stopwatch.png";
+import LogicWhisper from "../assets/logicwhisper.png";
+import GoogleClone from "../assets/googleclone.png";
 
 // 📌 Project Data Array
 const projects = [
   {
-    name: "skyCast Weather App",
+    name: "SkyCast Weather App",
     path: "https://sky-cast-weather-tawny.vercel.app/",
-    image: skyCast,
+    image: SkyCast,
     description:
       "SkyCast Weather App is a sleek and responsive weather web application that provides real-time weather updates for any location worldwide.",
   },
@@ -49,7 +49,7 @@ const projects = [
       "This website is a clone of Microsoft's official site, showcasing Microsoft 365, Windows 11, Edge, OneDrive, and Outlook.",
   },
   {
-    name: "CodVerse",
+    name: "CODVerse",
     path: "https://co-dverse.vercel.app/",
     image: CodVerse,
     description:
@@ -70,14 +70,14 @@ const projects = [
       "A modern landing page designed for a burger restaurant or fast-food business.",
   },
   {
-    name: "3-column-preview-card",
+    name: "3 Column Preview Card",
     path: "https://3-column-preview-card-hq.netlify.app/",
     image: ThreeColumn,
     description:
       "A responsive 3-column preview card designed for modern web layouts.",
   },
   {
-    name: "Single-Price-Grid-Components",
+    name: "Single Price Grid Component",
     path: "https://single-price-grid-component-master-hq.netlify.app/",
     image: SinglePrice,
     description:
@@ -119,14 +119,14 @@ const projects = [
       "A clean, responsive profile card showcasing social media links.",
   },
   {
-    name: "QR-Code Component Main",
+    name: "QR Code Component Main",
     path: "https://qr-code-component-main-hq.netlify.app/",
     image: QrCode,
     description:
       "A simple and elegant QR Code Component built using HTML and CSS.",
   },
   {
-    name: "TextLength Analyzer App",
+    name: "Text Length Analyzer App",
     path: "https://text-length-analyzer.netlify.app/",
     image: TextAnalyzer,
     description: "A simple tool to analyze the length of text in real-time.",
@@ -209,7 +209,6 @@ const AllProjects = () => {
         <p className="text-gray-600 mt-2">Click on a project to explore more 🚀</p>
       </motion.div>
 
-      {/* 🧩 Project Grid */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
           <motion.div
@@ -223,7 +222,6 @@ const AllProjects = () => {
             onClick={() => openModal(project)}
             className="block bg-background rounded-2xl shadow-xl text-para cursor-pointer transition duration-300 hover:shadow-2xl overflow-hidden"
           >
-            {/* 🖼️ Project Image */}
             <motion.img
               src={project.image}
               alt={project.name}
@@ -231,8 +229,6 @@ const AllProjects = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             />
-
-            {/* 📝 Project Name */}
             <div className="p-4">
               <span className="text-xl font-semibold">{project.name}</span>
             </div>
@@ -240,7 +236,6 @@ const AllProjects = () => {
         ))}
       </div>
 
-      {/* 🪟 Ant Design Modal */}
       <Modal
         title={selectedProject?.name}
         open={isModalVisible}
@@ -272,7 +267,6 @@ const AllProjects = () => {
           </Button>,
         ]}
       >
-        {/* 🖼️ Project Image in Modal */}
         {selectedProject?.image && (
           <img
             src={selectedProject.image}
@@ -280,8 +274,6 @@ const AllProjects = () => {
             className="w-full object-contain max-h-[500px] rounded-lg mb-4"
           />
         )}
-
-        {/* 📜 Project Description */}
         <p className="text-gray-700">{selectedProject?.description}</p>
       </Modal>
     </div>
@@ -289,3 +281,4 @@ const AllProjects = () => {
 };
 
 export default AllProjects;
+
