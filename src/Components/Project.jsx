@@ -11,69 +11,59 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 
-// ✅ Corrected image imports
-import Burger from "../assets/burger.png";
-import CaffeineCove from "../assets/caffeinecove.png";
-import CloudManagement from "../assets/cloudmanagement.png";
-import Form from "../assets/form.png";
-import Gym from "../assets/gym.png";
-import Microsoft from "../assets/microsoft.png";
-import SquidGame from "../assets/squidgame.png";
-import YoutubeClone from "../assets/youtubeclone.png";
-
-// Images Array
+// Images Array (using public folder paths)
 const Images = [
   {
-    img: Burger,
+    img: "/Burger.png",
     title: "Burger Website",
     description:
       "This Website is a modern landing page designed for a burger restaurant or fast-food business.",
     link: "https://burger-website-hq.netlify.app/",
   },
   {
-    img: CaffeineCove,
+    img: "/Caffine_cove.png",
     title: "Caffeine Cove",
     description:
       "Caffeine Cove is a sleek café/coffee-place website that delivers a clean and modern user experience.",
     link: "https://caffine-cove.vercel.app/",
   },
   {
-    img: CloudManagement,
+    img: "/Cloud_management.png",
     title: "Cloud Sphere",
     description:
       "CloudSphere is a modern cloud management web app that simplifies multi-cloud infrastructure monitoring and control.",
     link: "https://cloud-sphere.vercel.app/",
   },
   {
-    img: Form,
+    img: "/Form.png",
     title: "Payment method UI",
     description:
       "A responsive payment method UI designed to provide a smooth and user-friendly checkout experience.",
     link: "https://payment-method-ui.netlify.app/",
   },
   {
-    img: Gym,
+    img: "/gym.png",
     title: "Gym Website",
     description:
-      "This Gym Website is a engaging platform designed to promote fitness services and attract new members.",
+      "This Gym Website is an engaging platform designed to promote fitness services and attract new members.",
     link: "https://gym-website-hq.netlify.app/",
   },
   {
-    img: Microsoft,
+    img: "/microsoft.png",
     title: "Microsoft Website UI",
     description:
       "This website appears to be a cloned version of Microsoft's official site.",
     link: "https://website-9e404.web.app/",
   },
   {
-    img: SquidGame,
+    img: "/squidgame.png",
     title: "Squid Game UI",
     description:
       "This web project immerses visitors in the dramatic thrill of the Squid Game universe.",
     link: "https://squid-game-hq-dkyv.vercel.app/",
   },
   {
-    img: YoutubeClone,
+    img: "/Youtube_clone.png",
     title: "Youtube Clone",
     description: "Video streaming clone project.",
     link: "https://youtube-clone.netlify.app",

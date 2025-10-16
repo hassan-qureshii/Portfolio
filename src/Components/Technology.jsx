@@ -1,59 +1,53 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Technology = ({ skills }) => {
-  // Slice skills into two sets
-  const firstSet = skills.slice(0, 7)
-  const secondSet = skills.slice(7, 14)
+  const firstSet = skills.slice(0, 7);
+  const secondSet = skills.slice(7, 14);
+  const doubledFirstSet = [...firstSet, ...firstSet];
+  const doubledSecondSet = [...secondSet, ...secondSet];
 
-  // Duplicate each set to make seamless loop
-  const doubledFirstSet = [...firstSet, ...firstSet]
-  const doubledSecondSet = [...secondSet, ...secondSet]
-
-  // Scroll animation variants
   const scrollLeft = {
     animate: {
-      x: ['0%', '-100%'],
+      x: ["0%", "-100%"],
       transition: {
         x: {
           repeat: Infinity,
-          repeatType: 'loop',
-          ease: 'linear',
+          repeatType: "loop",
+          ease: "linear",
           duration: 30,
         },
       },
     },
-  }
+  };
 
   const scrollRight = {
     animate: {
-      x: ['-100%', '0%'],
+      x: ["-100%", "0%"],
       transition: {
         x: {
           repeat: Infinity,
-          repeatType: 'loop',
-          ease: 'linear',
+          repeatType: "loop",
+          ease: "linear",
           duration: 30,
         },
       },
     },
-  }
+  };
 
   return (
     <div className="mt-16">
-      {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
         className="text-2xl font-black font-sans text-heading"
       >
         Technologies
       </motion.h1>
 
-      {/* First row — scroll left */}
-      <div className="relative overflow-hidden  mt-5 px-5 cursor-pointer">
+      <div className="relative overflow-hidden mt-5 px-5 cursor-pointer">
         <motion.div
           className="flex gap-6 px-6 py-4"
           variants={scrollLeft}
@@ -77,8 +71,7 @@ const Technology = ({ skills }) => {
         </motion.div>
       </div>
 
-      {/* Second row — scroll right */}
-      <div className="relative overflow-hidden  mt-5 cursor-pointer px-5">
+      <div className="relative overflow-hidden mt-5 cursor-pointer px-5">
         <motion.div
           className="flex gap-6 px-6 py-4"
           variants={scrollRight}
@@ -102,7 +95,7 @@ const Technology = ({ skills }) => {
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Technology
+export default Technology;
