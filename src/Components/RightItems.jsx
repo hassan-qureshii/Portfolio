@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Technology from "./Technology";
 import Project from "./Project";
 import Contact from "./Contact";
-import Copyright from "./Copyright";
+import CopyRight from "./CopyRight";
 import UpButton from "./UpButton";
 
 const skills = [
@@ -78,7 +78,7 @@ const RightItems = () => {
       </div>
 
       {/* ✅ Footer Copyright */}
-      <Copyright />
+      <CopyRight />
     </div>
   );
 };
