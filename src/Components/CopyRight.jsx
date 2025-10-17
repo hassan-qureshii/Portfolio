@@ -2,7 +2,7 @@ import React from "react";
 import { CopyrightIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
-const CopyRight = () => {
+const Copyright = () => {
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
@@ -11,7 +11,6 @@ const CopyRight = () => {
       className="py-3 px-4 "
     >
       <div className="flex justify-between items-center text-sm text-para">
-        
         {/* Left Section */}
         <motion.div
           whileHover={{ scale: 1.05, x: 5 }}
@@ -35,4 +34,4 @@ const CopyRight = () => {
   );
 };
 
-export default CopyRight;
+export default Copyright;

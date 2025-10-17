@@ -1,9 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// ✅ No need to import from assets if in public folder
-// Just use `/htmllogo.png` etc. directly
-
 // ✅ Component Imports
 import Technology from "./Technology";
 import Project from "./Project";
@@ -80,6 +77,7 @@ const RightItems = () => {
         <UpButton />
       </div>
 
+      {/* ✅ Footer Copyright */}
       <Copyright />
     </div>
   );
