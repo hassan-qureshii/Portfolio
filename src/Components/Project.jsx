@@ -122,7 +122,7 @@ const Project = () => {
           ))}
         </div>
 
-        <Link to="Projects">
+        <Link to="/projects">
           <h1 className="mt-8 font-bold text-lg ml-2 flex">
             View All Projects
             <ArrowRightToLine size={20} className="ml-3" />

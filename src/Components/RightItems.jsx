@@ -22,7 +22,7 @@ const skills = [
   { name: "Framer Motion", img: "/Framer_logo.png" },
   { name: "Node.js", img: "/NodeJs_logo.png" },
   { name: "Express.js", img: "/ExpressJs_logo.png" },
-  { name: "MongoDB", img: "/MongoDB-logo.png" },
+  { name: "MongoDB", img: "/MongoDB_logo.png" },
 ];
 
 const RightItems = () => {

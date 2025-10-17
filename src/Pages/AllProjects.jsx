@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Modal, Button } from "antd";
 
+// ✅ All images come from the public folder → use absolute paths like "/image.png"
 const projects = [
   { name: "SkyCast Weather App", path: "https://sky-cast-weather-tawny.vercel.app/", image: "/skycast.png", description: "SkyCast Weather App is a sleek..." },
   { name: "Meal Metrics", path: "https://meal-metrics-six.vercel.app/", image: "/mealmetrics.png", description: "MealMetrics – A responsive..." },
