@@ -1,17 +1,15 @@
-  import React from 'react';
-  import Home from './Components/Home';
-  import { Routes, Route } from "react-router-dom";
-  import AllProjects from './Components/AllProjects';  // 👈 fixed: lowercase "components"
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import AllProjects from './Pages/AllProjects';
 
-  const App = () => {
-    return (
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="Projects" element={<AllProjects />} />
-        </Routes>
-      </div>
-    );
-  };
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<AllProjects />} />
+    </Routes>
+  );
+};
 
-  export default App;
+export default App;
