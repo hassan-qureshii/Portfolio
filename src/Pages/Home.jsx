@@ -4,7 +4,7 @@ import RightItems from '../Components/RightItems';
 
 const Home = () => {
   return (
-    <div className="bg-background h-screen w-screen grid grid-cols-1 md:grid-cols-[40%_60%]">
+    <div className="bg-background h-screen w-screen grid grid-cols-1 md:grid-cols-[35%_65%]">
       {/* Left - Side (Fixed, 40% on md+) */}
       <div className="h-auto md:h-screen md:sticky md:top-0">
         <LeftItems />

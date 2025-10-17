@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRightToLine } from "lucide-react";
+import { ArrowRightToLine, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // MUI Components
@@ -10,8 +10,9 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
+import Skeleton from "@mui/material/Skeleton"; // ✅ Skeleton import
 
-// Images Array (using public folder paths)
+// Images Array
 const Images = [
   {
     img: "/Burger.png",
@@ -28,18 +29,18 @@ const Images = [
     link: "https://caffine-cove.vercel.app/",
   },
   {
-    img: "/Cloud_management.png",
-    title: "Cloud Sphere",
+    img: "/skycast.png",
+    title: "SkyCast Weather App",
     description:
-      "CloudSphere is a modern cloud management web app that simplifies multi-cloud infrastructure monitoring and control.",
-    link: "https://cloud-sphere.vercel.app/",
+      "SkyCast is a responsive weather forecasting app that provides real-time temperature, humidity, and location-based reports. Built with modern UI for a smooth user experience.",
+    link: "https://sky-cast-weather-tawny.vercel.app/",
   },
   {
-    img: "/Form.png",
-    title: "Payment method UI",
+    img: "/mealmetrics.png",
+    title: "MealMetrics",
     description:
-      "A responsive payment method UI designed to provide a smooth and user-friendly checkout experience.",
-    link: "https://payment-method-ui.netlify.app/",
+      "Meal Metrics helps users discover and explore recipes with detailed nutritional information. A modern, mobile-friendly interface for food lovers.",
+    link: "https://meal-metrics-six.vercel.app/",
   },
   {
     img: "/gym.png",
@@ -73,6 +74,14 @@ const Images = [
 const Project = () => {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [loading, setLoading] = useState(true); // ✅ skeleton state
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // ✅ minimum 5 seconds skeleton
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleOpen = (project) => {
     setSelectedProject(project);
@@ -110,13 +119,19 @@ const Project = () => {
               className="bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all"
               onClick={() => handleOpen(item)}
             >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-full h-52 object-cover"
-              />
+              {loading ? (
+                <Skeleton variant="rectangular" width="100%" height={208} />
+              ) : (
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-52 object-cover"
+                />
+              )}
               <div className="p-4">
-                <h2 className="text-lg font-bold">{item.title}</h2>
+                <h2 className="text-lg font-bold">
+                  {loading ? <Skeleton width="60%" /> : item.title}
+                </h2>
               </div>
             </motion.div>
           ))}
@@ -131,7 +146,15 @@ const Project = () => {
       </div>
 
       <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
-        <DialogTitle>{selectedProject?.title}</DialogTitle>
+        <div className="flex justify-between items-center px-6 pt-4">
+          <DialogTitle>{selectedProject?.title}</DialogTitle>
+          <button
+            onClick={handleClose}
+            className="p-1 hover:bg-gray-100 rounded-full"
+          >
+            <X size={22} />
+          </button>
+        </div>
         <DialogContent>
           <img
             src={selectedProject?.img}
@@ -147,14 +170,15 @@ const Project = () => {
               href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              color="primary"
+              sx={{
+                backgroundColor: "#1C398E",
+                color: "#fff",
+                "&:hover": { backgroundColor: "#162c6e" },
+              }}
             >
               See Live Project
             </Button>
           )}
-          <Button onClick={handleClose} variant="contained" className="bg-heading">
-            Close
-          </Button>
         </DialogActions>
       </Dialog>
     </div>
