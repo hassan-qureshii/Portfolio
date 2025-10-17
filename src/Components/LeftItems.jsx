@@ -11,20 +11,6 @@ const LeftItems = () => {
     { name: "Contact", to: "contact" },
   ];
 
-  const menuVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}
@@ -32,7 +18,7 @@ const LeftItems = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="w-full h-auto lg:h-screen flex flex-col lg:justify-between font-[var(--font-body)]"
     >
-      {/* Top Section */}
+      {/* Top Content */}
       <div>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -47,7 +33,7 @@ const LeftItems = () => {
             Akbar Qureshi
           </h1>
           <p className="mt-2 text-para text-lg font-medium">
-            MERN Stack | React | Next.js Developer
+            Mern Stack | React | Next.js Developer
           </p>
         </motion.div>
 
@@ -69,8 +55,15 @@ const LeftItems = () => {
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={menuVariants}
-          className="flex gap-5 md:block m-10 text-blue-900 font-poppins tracking-wide"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          className="flex gap-5 md:block m-10 text-blue-900 font-medium tracking-wide"
         >
           {menuItems.map(({ name, to }) => (
             <Link
@@ -81,10 +74,14 @@ const LeftItems = () => {
               spy={true}
               offset={-50}
               activeClass="active"
+              containerId="right-container"
             >
               <motion.p
-                variants={itemVariants}
-                className="hover:text-para py-1 cursor-pointer duration-500 text-lg font-medium"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="hover:text-para py-1 cursor-pointer duration-500"
                 whileHover={{ scale: 1.1, x: 5 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
@@ -95,7 +92,7 @@ const LeftItems = () => {
         </motion.div>
       </div>
 
-      {/* Social Icons */}
+      {/* Bottom Social Icons */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
