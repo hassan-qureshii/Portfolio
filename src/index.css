@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --color-heading:var(--color-blue-900);
+  --color-background: #F3F8FC;  
+  --color-secondary: #64748b; 
+  --color-para:#112044;
+};
+
+body{
+  overflow-x:hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
