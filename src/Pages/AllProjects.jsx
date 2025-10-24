@@ -28,10 +28,10 @@ const projects = [
     description: "CODVerse is a Call of Duty fan hub featuring game modes, news, and sleek animations. Built with responsive design for gamers."
   },
   { 
-    name: "DigitalEra Faculty", 
+    name: "DigitalEra Institute", 
     path: "https://digital-era-institute.vercel.app/", 
     image: "/DigitalEra.png", 
-    description: "A React.js faculty platform for educational institutions. Includes clean navigation and modern UI for students and staff."
+    description: "A React.js Institute platform for educational institutions. Includes clean navigation and modern UI for students and staff."
   },
   { 
     name: "Food Website", 

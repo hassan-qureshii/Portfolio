@@ -65,9 +65,9 @@ const Images = [
   },
   {
     img: "/Youtube_clone.png",
-    title: "Youtube Clone",
+    title: "Stream Nest",
     description: "Video streaming clone project.",
-    link: "https://youtube-clone.netlify.app",
+    link: "https://stream-nest-pearl.vercel.app/",
   },
 ];
 

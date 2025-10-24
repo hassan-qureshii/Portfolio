@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import { Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import { WhatsApp, Send } from "@mui/icons-material";
+import { WhatsApp, Send, Person, Email, Message } from "@mui/icons-material";
 
 const Contact = () => {
   const whatsappNumber = "923068868886"; // your WhatsApp number (without +)
   const mailLink =
     "mailto:hassanqureshi8886@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Hassan,";
 
-  // ✅ State for inputs
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // ✅ Handle Input Change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // ✅ Handle Submit (Send to WhatsApp)
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -39,11 +36,8 @@ const Contact = () => {
     )}%0A💬 Message: ${encodeURIComponent(message)}`;
 
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
-
-    // open WhatsApp in new tab
     window.open(whatsappLink, "_blank");
 
-    // Optional: Clear inputs
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -52,7 +46,6 @@ const Contact = () => {
       id="contact"
       className="px-6 md:px-16 py-20 flex flex-col items-center text-center"
     >
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -62,7 +55,6 @@ const Contact = () => {
         Let’s Work Together
       </motion.h2>
 
-      {/* Description */}
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -74,11 +66,8 @@ const Contact = () => {
         amazing together!
       </motion.p>
 
-      {/* Grid Layout */}
       <div className="grid md:grid-cols-2 gap-10 w-full max-w-5xl">
-        {/* 📞 Contact Info (centered vertically) */}
         <div className="space-y-6 flex flex-col items-center justify-center text-center md:justify-center h-full">
-          {/* WhatsApp */}
           <motion.a
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
@@ -98,7 +87,6 @@ const Contact = () => {
             </div>
           </motion.a>
 
-          {/* Email */}
           <motion.a
             href={mailLink}
             aria-label="Send email to Hassan"
@@ -117,7 +105,6 @@ const Contact = () => {
           </motion.a>
         </div>
 
-        {/* ✍️ Contact Form */}
         <motion.form
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 50 }}
@@ -127,48 +114,56 @@ const Contact = () => {
           className="flex flex-col gap-5 w-full"
         >
           {/* Name */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 relative">
             <label className="text-sm font-semibold text-heading text-left">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              required
-              className="p-3 border-b border-gray-800 rounded-xl text-para focus:outline-none"
-            />
+            <div className="relative">
+              <Person className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
+                required
+                className="p-3 pl-10 border-b border-gray-800 rounded-xl text-para focus:outline-none w-full"
+              />
+            </div>
           </div>
 
           {/* Email */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 relative">
             <label className="text-sm font-semibold text-heading text-left">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              required
-              className="p-3 border-b border-gray-800 rounded-xl text-para focus:outline-none"
-            />
+            <div className="relative">
+              <Email className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+                className="p-3 pl-10 border-b border-gray-800 rounded-xl text-para focus:outline-none w-full"
+              />
+            </div>
           </div>
 
           {/* Message */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 relative">
             <label className="text-sm font-semibold text-heading text-left">Message</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Write your message here..."
-              required
-              rows="3"
-              className="p-3 border-b border-gray-800 rounded-xl text-para focus:outline-none"
-            ></textarea>
+            <div className="relative">
+              <Message className="absolute left-3 top-3 text-gray-400" />
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Write your message here..."
+                required
+                rows="3"
+                className="p-3 pl-10 border-b border-gray-800 rounded-xl text-para focus:outline-none w-full"
+              ></textarea>
+            </div>
           </div>
 
-          {/* Send Button */}
           <div className="flex justify-end">
             <button
               type="submit"
