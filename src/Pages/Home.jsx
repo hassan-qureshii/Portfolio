@@ -1,7 +1,6 @@
 import React from "react";
 import LeftItems from "../Components/LeftItems";
 import RightItems from "../Components/RightItems";
-
 const Home = () => {
   return (
     <div className="bg-background h-screen w-screen grid grid-cols-1 md:grid-cols-[35%_65%]">
