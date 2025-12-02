@@ -1,8 +1,6 @@
-// ✅ RightItems.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
-// Component Imports
 import Technology from "./Technology";
 import Project from "./Project";
 import Contact from "./Contact";
