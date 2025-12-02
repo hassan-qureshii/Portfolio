@@ -17,7 +17,7 @@ const skills = [
   { name: "React", img: "/react_logo.png" },
   { name: "Tailwind CSS", img: "/TailwindCss_logo.png" },
   { name: "Next.js", img: "/NextJs_logo.png" },
-  { name: "TypeScript", img: "/typescript_logo.png" }, // ✅ Fixed missing comma
+  { name: "TypeScript", img: "/typescript_logo.png" },
   { name: "Ant Design", img: "/AntDesign_logo.png" },
   { name: "Material UI", img: "/MaterialUI_logo.png" },
   { name: "Vue", img: "/Vue.png" },
