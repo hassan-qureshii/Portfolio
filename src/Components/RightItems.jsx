@@ -1,7 +1,8 @@
+// ✅ RightItems.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
-// ✅ Component Imports
+// Component Imports
 import Technology from "./Technology";
 import Project from "./Project";
 import Contact from "./Contact";
@@ -16,6 +17,7 @@ const skills = [
   { name: "React", img: "/react_logo.png" },
   { name: "Tailwind CSS", img: "/TailwindCss_logo.png" },
   { name: "Next.js", img: "/NextJs_logo.png" },
+  { name: "TypeScript", img: "/typescript_logo.png" }, // ✅ Fixed missing comma
   { name: "Ant Design", img: "/AntDesign_logo.png" },
   { name: "Material UI", img: "/MaterialUI_logo.png" },
   { name: "Vue", img: "/Vue.png" },
@@ -50,16 +52,12 @@ const RightItems = () => {
           viewport={{ once: true }}
           className="mt-2 text-para leading-loose"
         >
-         Assalam o Alaikum! My name is Akbar Qureshi, and I hope this message finds you well.
-I have completed my Diploma of Associate Engineering (DAE) in Information & Communication Technology (ICT) from CTTI College Islamabad.
-
-I am a passionate Software Developer, specializing in Frontend and MERN Stack development since March 2024. I love building modern, responsive, and user-friendly interfaces using React.js, Framer Motion, and Tailwind CSS to create smooth and interactive user experiences.
-
-My development toolkit includes Visual Studio Code, GitHub, Canva, and other modern tools that make my workflow more efficient. I’m also currently learning Next.js and TypeScript to enhance my frontend development skills and build more scalable applications.
-
-Recently, I’ve been working with clients on real-world projects, including creating a modern institute website, which you can check out below. At the moment, I’m also developing a remote work software that allows users to access and manage their dashboards, as well as an e-commerce platform for a client.
-
-My focus is on writing clean, efficient code and building products that solve real problems and deliver a smooth user experience.
+          Assalam o Alaikum! My name is Akbar Qureshi, and I hope this message finds you well.
+          I have completed my Diploma of Associate Engineering (DAE) in Information & Communication Technology (ICT) from CTTI College Islamabad.
+          I am a passionate Software Developer, specializing in Frontend and MERN Stack development since March 2024. I love building modern, responsive, and user-friendly interfaces using React.js, Framer Motion, and Tailwind CSS to create smooth and interactive user experiences.
+          My development toolkit includes Visual Studio Code, GitHub, Canva, and other modern tools that make my workflow more efficient. I’m also currently learning Next.js and TypeScript to enhance my frontend development skills and build more scalable applications.
+          Recently, I’ve been working with clients on real-world projects, including creating a modern institute website, which you can check out below. At the moment, I’m also developing a remote work software that allows users to access and manage their dashboards, as well as an e-commerce platform for a client.
+          My focus is on writing clean, efficient code and building products that solve real problems and deliver a smooth user experience.
         </motion.p>
       </div>
 

@@ -1,9 +1,10 @@
+// ✅ Technology.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
 const Technology = ({ skills }) => {
-  const firstSet = skills.slice(0, 7);
-  const secondSet = skills.slice(7, 14);
+  const firstSet = skills.slice(0, 8);
+  const secondSet = skills.slice(8, 15);
   const doubledFirstSet = [...firstSet, ...firstSet];
   const doubledSecondSet = [...secondSet, ...secondSet];
 
@@ -47,6 +48,7 @@ const Technology = ({ skills }) => {
         Technologies
       </motion.h1>
 
+      {/* 🔄 First Row */}
       <div className="relative overflow-hidden mt-5 px-5 cursor-pointer">
         <motion.div
           className="flex gap-6 px-6 py-4"
@@ -71,6 +73,7 @@ const Technology = ({ skills }) => {
         </motion.div>
       </div>
 
+      {/* 🔄 Second Row */}
       <div className="relative overflow-hidden mt-5 cursor-pointer px-5">
         <motion.div
           className="flex gap-6 px-6 py-4"
