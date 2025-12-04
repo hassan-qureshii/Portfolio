@@ -32,9 +32,16 @@ const LeftItems = () => {
           >
             Akbar Qureshi
           </h1>
-          <p className="mt-2 text-para text-lg font-medium">
-            Mern Stack | React | Next.js Developer
-          </p>
+         <motion.p
+  className="mt-2 text-para text-lg font-medium"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  whileHover={{ color: "#083b75" }}
+  whileTap={{ scale: 0.95 }} // tap/click feedback
+>
+  Mern Stack | Vue.js | TypeScript | Next.js Developer
+</motion.p>
         </motion.div>
 
         <motion.p
