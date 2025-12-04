@@ -31,7 +31,7 @@ const RightItems = () => {
       id="right-container"
       className="w-full h-screen flex flex-col justify-between overflow-y-auto overflow-x-hidden scroll-smooth"
     >
-      {/* 📝 About Section */}
+      {/* About Section */}
       <div id="about" className="pt-10 pr-5">
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
