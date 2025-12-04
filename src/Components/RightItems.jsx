@@ -50,7 +50,7 @@ const RightItems = () => {
           viewport={{ once: true }}
           className="mt-2 text-para leading-loose"
         >
-          Assalam o Alaikum! My name is Akbar Qureshi, and I hope this message finds you well.
+          Hello, I’m Hassan, and I hope this message finds you well.
           I have completed my Diploma of Associate Engineering (DAE) in Information & Communication Technology (ICT) from CTTI College Islamabad.
           I am a passionate Software Developer, specializing in Frontend and MERN Stack development since March 2024. I love building modern, responsive, and user-friendly interfaces using React.js, Framer Motion, and Tailwind CSS to create smooth and interactive user experiences.
           My development toolkit includes Visual Studio Code, GitHub, Canva, and other modern tools that make my workflow more efficient. I’m also currently learning Next.js and TypeScript to enhance my frontend development skills and build more scalable applications.
